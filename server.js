@@ -1,15 +1,18 @@
 const express = require('express')
+
+
 const app = express()
 
-// app.set('view engine', 'ejs') // express가 자동으로 ejs를 불러옴
+app.set('view engine', 'ejs')
 
+// 'hello world 찍기'
 app.get('/', (req, res)=> {
-  res.send('hello world')
+  res.render('index.ejs')
 })
 
-// app.use(morgan('tiny'))
 
-app.listen(3000, ()=> {
+// 포트 연결
+app.listen(3006, ()=> {
   console.log('listening..')
 })
 
