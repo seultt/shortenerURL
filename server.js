@@ -1,12 +1,13 @@
 const express = require('express')
 const morgan = require('morgan') // 현재 서버상황
 const basicAuth = require('express-basic-auth')
+const randomstring = require('randomstring')
 
 
 //data 구조
 const data = [
   {longUrl: 'http://google.com', 
-  id: '58DX37' }
+  id: randomstring.generate(6) }
 ]
 
 const app = express()
@@ -47,7 +48,7 @@ app.get('/:id', (req, res) => {
 
 
 // 포트 연결
-app.listen(3017, ()=> {
+app.listen(3020, ()=> {
   console.log('listening..')
 })
 
