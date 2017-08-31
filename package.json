@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/seultt/shortenerURL#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "express-basic-auth": "^1.1.2",
